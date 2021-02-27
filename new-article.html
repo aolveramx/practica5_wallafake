@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CDN Sources -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstrap.min.css">
+  <!-- My CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <title>WallaFake</title>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="index.html"><i class="fas fa-shopping-cart"> WallaFake</i></i></a>
+  </nav>
+  <!-- Loader -->
+  <div class="lds-ring hidden"><div></div><div></div><div></div><div></div></div>
+
+  <!-- Alert Global Errors -->
+  <div class="global-errors hidden"></div>
+
+  <!-- New Article -->
+  <div class="container mt-4">
+    <h1 class="display-8 text-center">Publica tu artículo</h1>
+
+      <form id="articles-form">
+        <div class="form-group" >
+          <label for="title">Titulo</label>
+          <input type="text" id="title"class="form-control" placeholder="Xbox Series S">
+        </div>
+
+        <div class="form-group" >
+          <label for="operationType">Modalidad</label>
+            <input type="radio" id="operationType" name="operationType" value="sell" >
+            <label for="operationType">Vendo</label>
+            <input type="radio" id="operationType" name="operationType" value="wanted" >
+            <label for="ot-wanted">Compro</label>
+        </div>
+
+        <div class="form-group" >
+          <label for="price">$ Price</label>
+          <input type="text" id="price" class="form-control" placeholder="900">
+        </div>
+
+        <select class="form-select form-select-lg mb-3" aria-label="category" id="category">
+          <option selected>Categoría</option>
+          <option value="electronics">Electrónicos</option>
+          <option value="clothes">Ropa y accesorios</option>
+          <option value="mobility">Mobilidad</option>
+          <option value="musical">Instrumentos musicales</option>
+        </select>
+
+        <input type="submit" value="Publicar" class="btn btn-primary btn-block">
+      </form>
+
+  </div>
+  <!-- JS Script -->
+  <script type="module" src="js/new-article.js"></script>
+</html>
