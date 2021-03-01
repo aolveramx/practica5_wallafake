@@ -1,7 +1,8 @@
 import Articles from './controllers/Articles.js';
 import ShowLoading from './controllers/ShowLoading.js';
 import ShowError from './controllers/ShowError.js';
-import NewArticleOrLogin from './controllers/NewArticleOrLogin.js';
+import LoginBtn from './controllers/LoginBtn.js';
+import NewArticleBtn from './controllers/NewArticleBtn.js';
 import Logout from './controllers/Logout.js';
 
 
@@ -16,8 +17,11 @@ window.addEventListener('DOMContentLoaded', async (e) => {
   const errorsElement = document.querySelector('.global-errors');
   new ShowError(errorsElement);
 
-  const newArticleButton = document.querySelector('.new-article');
-  new NewArticleOrLogin(newArticleButton);
+  const loginButton = document.querySelector('.nav-login-article');
+  new LoginBtn(loginButton);
+
+  const articleButton = document.querySelector('.nav-login-article');
+  new NewArticleBtn(articleButton);
 
   const logoutButton = document.querySelector('.logout');
   new Logout(logoutButton);

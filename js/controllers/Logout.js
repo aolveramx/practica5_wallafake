@@ -15,8 +15,6 @@ export default class Logout extends Article {
     if (userIsLogged) {
       const logoutButton = this.element.querySelector('.logout-button');
       logoutButton.classList.remove('is-hidden');
-    } else {
-      return
     }
   }
 
