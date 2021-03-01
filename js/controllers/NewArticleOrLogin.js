@@ -13,11 +13,10 @@ export default class NewArticleOrLogin extends Article {
     const userIsLogged = await dataService.isUserLogged();
     if (userIsLogged) {
       const newArticleButton = this.element.querySelector('.new-article-button');
-      newArticleButton.classList.remove('visually-hidden');
- 
+      newArticleButton.classList.remove('is-hidden');
     } else {
-      const loginRegisterButtons = this.element.querySelector('.login-register-buttons');
-      loginRegisterButtons.classList.remove('visually-hidden');
+      const loginButton = this.element.querySelector('.login-button');
+      loginButton.classList.remove('is-hidden');
     }
   }
 

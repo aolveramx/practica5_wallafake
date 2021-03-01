@@ -107,6 +107,10 @@ export default {
   deleteArticle: async function(article) {
     const url = `${BASE_URL}/api/articles/${article.id}`;
     return await this.delete(url);
-  }
+  },
+
+  logout: async function() {
+    return localStorage.removeItem(TOKEN_KEY);
+  },
 
 };

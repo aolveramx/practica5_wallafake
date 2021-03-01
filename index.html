@@ -14,9 +14,13 @@
 <body>
 
   <!-- Navbar -->
-
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <a class="navbar-brand" href="index.html"><i class="fas fa-shopping-cart"> WallaFake</i></i></a>
+    <span class="new-article logout">
+      <button type="button" class="btn btn-primary bg-white new-article-button is-hidden"><a href="new-article.html"><i class="fas fa-plus-square"> Publica</i></a></button>
+      <button type="button" class="btn btn-warning logout-button is-hidden"><a href="/index.html"><i class="fas fa-sign-out-alt"></i></a></button>
+      <button type="button" class="btn btn-success bg-light login-button is-hidden"><a href="/login.html"><i class="fas fa-sign-in-alt"> Ingresa</i></a></button>
+    </span>
   </nav>
 
   <!-- Loader -->
@@ -42,15 +46,6 @@
         </thead>
         <tbody class="article-list"></tbody>
       </table>
-  </div>
-
-  <!-- Login/Register buttons -->
-  <div class="new-article">
-    <button type="button" class="btn btn-primary bg-white new-article-button"><a href="new-article.html">Nuevo anuncio</a></button>
-    <span class="visually-hidden login-register-buttons">
-      <button type="button" class="btn btn-primary bg-white"><a href="/login.html">Ingresa</a></button>
-      <button type="button" class="btn btn-primary bg-white"><a href="/register.html">Registrate</a></button>
-    </span>
   </div>
 
   <!-- JS Script -->
