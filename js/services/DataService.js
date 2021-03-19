@@ -13,18 +13,24 @@ export default {
         const user = article.user || {};
         return {
           id: article.id,
-          title: article.title,
+          title: article.title, //replace(/(<([^>]+)>)/gi, ""),
           operationType: article.operationType,
-          price: article.price,
+          price: article.price, //replace(/(<([^>]+)>)/gi, ""),
           category: article.category,
           date: article.createdAt || article.updatedAt,
           author: user.username || 'Desconocido',
           canBeDeleted: currentUser ? currentUser.userId === article.userId : false,
+          allowView: this.isUserLogged() ? article.id : false,
         }
       });
     } else {
       throw new Error(`HTTP Error: ${response.status}`)
     }
+  },
+
+  getArticle: async function(article) {
+    const url = `${BASE_URL}/api/articles/${article.id}`;
+    return window.location.href = url;
   },
 
   post: async function(url, postData, json=true) {
@@ -112,5 +118,4 @@ export default {
   logout: async function() {
     return localStorage.removeItem(TOKEN_KEY);
   },
-
 };

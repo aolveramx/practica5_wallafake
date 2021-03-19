@@ -10,6 +10,7 @@ export default class Articles extends Article {
       const row = document.createElement('tr');
       row.innerHTML = articleView(article);
       const deleteButton = row.querySelector('#erase-btn');
+      const detailsButton = row.querySelector('#details-btn');
       if (deleteButton) {
         deleteButton.addEventListener('click', async (e) => {
           const deleteConfirmed = confirm('¿Seguro que quieres borrarlo?');
@@ -20,6 +21,9 @@ export default class Articles extends Article {
           }
         });
       }
+      detailsButton.addEventListener('click', async (e) => {
+        await dataService.getArticle(article);
+      });
       this.element.appendChild(row);
     }
   }
