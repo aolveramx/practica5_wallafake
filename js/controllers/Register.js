@@ -1,7 +1,6 @@
 import Article from './Article.js';
 import dataService from '../services/DataService.js';
 
-
 export default class Register extends Article {
 
   constructor(element) {
@@ -12,7 +11,7 @@ export default class Register extends Article {
   async makePost (user) {
     await dataService.registerUser(user);
     alert('Usuario creado con éxito!');
-    window.location.href = '/login.html';
+    window.location.href = '/html/login.html';
   }
 
   checkInputErrors() {

@@ -1,5 +1,5 @@
 import Article from './Article.js';
-import { errorView } from '../views/error.js';
+import { errorView } from '../views/errorView.js';
 
 export default class ShowError extends Article {
 

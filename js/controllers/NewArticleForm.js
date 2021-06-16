@@ -12,7 +12,7 @@ export default class NewArticleForm extends Article {
   async checkIfUserIsLogged() {
     const userIsLogged = await dataService.isUserLogged();
     if (!userIsLogged) {
-      window.location.href = '/login.html?next=/new-article.html';
+      window.location.href = 'html/login.html?next=/new-article.html';
     } else {
       this.publish(this.events.FINISH_LOADING);
     }

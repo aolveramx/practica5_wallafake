@@ -1,6 +1,6 @@
 import Article from './Article.js';
 import dataService from '../services/DataService.js';
-import { articleView } from '../views/article.js';
+import { articleView } from '../views/articleView.js';
 
 export default class Articles extends Article {
 

@@ -4,18 +4,19 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <!-- CDN Sources -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstrap.min.css">
   <!-- My CSS -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
   <title>WallaFake</title>
 </head>
 <body>
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="index.html"><i class="fas fa-shopping-cart"> WallaFake</i></i></a>
+    <a class="navbar-brand" href="/index.html"><i class="fas fa-shopping-cart"> WallaFake</i></i></a>
   </nav>
 
   <!-- Loader -->
@@ -24,25 +25,28 @@
   <!-- Alert Global Errors -->
   <div class="global-errors hidden"></div>
 
-  <!-- Login -->
+  <!-- Register -->
   <form novalidate>
   <fieldset>
-    <legend>Accesso</legend>
+    <legend>Regístrate</legend>
     <div class="form-group">
       <label>Correo electrónico</label>
-      <input name="email" class="form-control" type="email" placeholder="Ingresa tu email" required>
+      <input name="email" class="form-control" type="email" placeholder="Ingresa un email válido" required>
       <small class="form-text text-muted">Nunca compartiremos tus datos con terceros</small>
     </div>
     <div class="form-group">
       <label>Contraseña</label>
-      <input name="password" class="form-control" type="password" placeholder="Contraseña" required>
+      <input name="password" class="form-control" type="password" placeholder="Ingresa una contraseña" required>
+    </div>
+    <div class="form-group">
+      <label>Confirmación</label>
+      <input name="password-confirm" class="form-control" type="password" placeholder="Confirma tu contraseña" required>
     </div>
   </fieldset>
-    <button type="login" class="btn btn-primary">Ingresa</button>
-    <button type="button" class="btn btn-success bg-light"><a href="/register.html"><i class="far fa-address-card"></i> No estas registrado?</a></button>
+    <button type="login" class="btn btn-primary">Regístrate</button>
   </form>
   
   <!-- JS Script -->
-  <script type="module" src="js/login.js"></script>
+  <script type="module" src="/js/register.js"></script>
 </body>
 </html>

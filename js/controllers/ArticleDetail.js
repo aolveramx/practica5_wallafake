@@ -1,6 +1,6 @@
 import Article from "./Article.js";
 import dataService from "../services/DataService.js";
-import { articleDetailView } from '../views/articleDetail.js';
+import { articleDetailView } from '../views/articleDetailView.js';
 
 export default class ArticleDetail extends Article {
 
@@ -13,7 +13,7 @@ export default class ArticleDetail extends Article {
   async checkIfUserIsLogged() {
     const userIsLogged = await dataService.isUserLogged();
     if (!userIsLogged) {
-      window.location.href = '/login.html?next=/details.html';
+      window.location.href = '/login.html?next=/html/details.html';
     } else {
       this.publish(this.events.FINISH_LOADING);
     }
