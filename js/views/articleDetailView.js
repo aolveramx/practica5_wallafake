@@ -1,7 +1,7 @@
 
 export const articleDetailView = (article) => {
   return `
-  <h1 class="display-4">${articles.title}</h1>
+  <h1 class="display-4">${article.title}</h1>
   <span class="badge badge-success">${article.operationType}</span>
   <p class="lead">${article.price}</p>
 

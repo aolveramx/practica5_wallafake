@@ -13,9 +13,9 @@ export default {
         const user = article.user || {};
         return {
           id: article.id,
-          title: article.title, //replace(/(<([^>]+)>)/gi, ""),
+          title: article.title.replace(/(<([^>]+)>)/gi, ""),
           operationType: article.operationType,
-          price: article.price, //replace(/(<([^>]+)>)/gi, ""),
+          price: article.price.toString().replace(/(<([^>]+)>)/gi) || [],
           category: article.category,
           date: article.createdAt || article.updatedAt,
           author: user.username || 'Desconocido',
@@ -26,11 +26,6 @@ export default {
     } else {
       throw new Error(`HTTP Error: ${response.status}`)
     }
-  },
-
-  getArticle: async function(article) {
-    const url = `${BASE_URL}/api/articles/${article.id}`;
-    return window.location.href = url;
   },
 
   post: async function(url, postData, json=true) {
