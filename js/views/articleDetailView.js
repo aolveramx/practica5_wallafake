@@ -12,7 +12,7 @@ export const articleDetailView = (article) => {
   <hr class="my-4">
   <p>Los mejores tratos estan en <strong>WallaFake</strong></p>
   <p class="lead">
-    <a class="btn btn-primary btn-lg" href="index.html" role="button">Mas anuncios</a>
+    <a class="btn btn-primary btn-lg" href="/index.html" role="button">Mas anuncios</a>
   </p>
   `;
 };
