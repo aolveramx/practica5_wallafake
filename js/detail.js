@@ -28,9 +28,9 @@ async function loadArticle(detailId) {
     const data = await response.json()
     const article = {
       id: data.id,
-      title: data.title,
+      title: data.title.replace(/(<([^>]+)>)/gi, ""),
       operationType: data.operationType,
-      price: data.price,
+      price: data.price.toString().replace(/(<([^>]+)>)/gi) || [],
       category: data.category
     }
 
